@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanal Doktor Asistanı</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Init Modal -->
+    <div id="init-modal" class="modal-overlay">
+        <div class="modal-content glass-panel">
+            <div class="modal-icon">
+                <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <h2>Hoş Geldiniz</h2>
+            <p>Size daha iyi yardımcı olabilmem için lütfen bilgilerinizi giriniz.</p>
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="user-name" placeholder="Adınız" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-calendar-days"></i>
+                <input type="number" id="user-age" placeholder="Yaşınız" min="1" max="120">
+            </div>
+            <button id="start-btn" class="primary-btn">Sohbete Başla</button>
+        </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div id="app-container" class="container hidden">
+        <div class="chat-wrapper glass-panel">
+            
+            <header class="chat-header">
+                <div class="header-info">
+                    <div class="avatar">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <div class="status-dot"></div>
+                    </div>
+                    <div class="details">
+                        <h1>Sanal Doktor Asistanı</h1>
+                        <span class="status-text">Çevrimiçi</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="chat-container" id="chat-box">
+                <!-- Messages will appear here -->
+            </main>
+
+            <footer class="input-area">
+                <input type="text" id="message-input" placeholder="Şikayet veya sorunuzu yazın..." autocomplete="off">
+                <button id="send-btn" class="send-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
